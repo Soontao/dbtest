@@ -19,7 +19,7 @@ import com.alibaba.fastjson.serializer.SerializerFeature;
 
 @RestController
 @RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-public class UserController {
+public class RootController {
 	@Autowired
 	UserRepo userRepo;
 

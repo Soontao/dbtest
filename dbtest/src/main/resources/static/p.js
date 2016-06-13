@@ -37,8 +37,8 @@ function savePub() {
 			return true;
 		},
 		success : function(result) {
-			$('#dlg').dialog('close'); // close the dialog
-			$('#dg').datagrid('reload'); // reload the user data
+			$('#dlg').dialog('close'); 
+			$('#dg').datagrid('reload'); 
 		}
 	});
 }
