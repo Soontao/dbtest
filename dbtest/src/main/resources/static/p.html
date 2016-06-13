@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css"
+	href="easyui/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
+<script type="text/javascript" src="easyui/jquery.min.js">
+	
+</script>
+<script type="text/javascript" src="/p.js"></script>
+<script type="text/javascript" src="easyui/jquery.easyui.min.js">
+	
+</script>
+<title>Web DB 测试</title>
+</head>
+<body>
+	<table id="dg" title="Users" class="easyui-datagrid"
+		style="width: 700px; height: 400px" url="/publist" toolbar="#toolbar"
+		rownumbers="true" fitColumns="true" singleSelect="true">
+		<thead>
+			<tr>
+				<th field="id" width="50">Id</th>
+				<th field="pubname" width="50">Name</th>
+				<th field="phone" width="50">Phone</th>
+				<th field="address" width="50">Address</th>
+			</tr>
+		</thead>
+	</table>
+	<div id="toolbar">
+		<a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true"
+			onclick="newPub()">New Pub</a> <a href="#"
+			class="easyui-linkbutton" iconCls="icon-edit" plain="true"
+			onclick="editPub()">Edit Pub</a> <a href="#"
+			class="easyui-linkbutton" iconCls="icon-remove" plain="true"
+			onclick="destroyPub()">Remove Pub</a>
+	</div>
+	<div id="dlg" class="easyui-dialog"
+		style="width: 400px; height: 280px; padding: 10px 20px" closed="true"
+		buttons="#dlg-buttons">
+		<div class="ftitle">User Information</div>
+		<form id="fm" method="post">
+			<div class="fitem">
+				<label>Id:</label> <input name="id">
+			</div>
+			<div class="fitem">
+				<label>Name:</label> <input name="pubname" required="true">
+			</div>
+			<div class="fitem">
+				<label>Phone:</label> <input name="phone" required="true">
+			</div>
+			<div class="fitem">
+				<label>Address:</label> <input name="address" required="true">
+			</div>
+		</form>
+	</div>
+	<div id="dlg-buttons">
+		<a href="#" class="easyui-linkbutton" iconCls="icon-ok"
+			onclick="savePub()">Save</a> <a href="#" class="easyui-linkbutton"
+			iconCls="icon-cancel" onclick="javascript:$('#dlg').dialog('close')">Cancel</a>
+	</div>
+</body>
+</html>
