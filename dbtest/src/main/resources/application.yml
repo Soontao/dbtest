@@ -1,24 +1,24 @@
 spring:
-  datasource:
-    name: mysql
-    url: jdbc:mysql://suntao.science:3306/dbtest?useUnicode=true&characterEncoding=UTF-8
-    username: dbtest
-    password: dbtest
-    type: com.alibaba.druid.pool.DruidDataSource
-    driver-class-name: com.mysql.jdbc.Driver
-    maxActive: 20
-    initialSize: 1
-    maxWait: 60000
-    minIdle: 1
-    timeBetweenEvictionRunsMillis: 60000
-    minEvictableIdleTimeMillis: 300000
-    validationQuery: select 'x'
-    testWhileIdle: true
-    testOnBorrow: false
-    testOnReturn: false
-    poolPreparedStatements: true
-    maxOpenPreparedStatements: 20
+#  datasource:
+#    name: mysql
+#    url: jdbc:mysql://suntao.science:3306/dbtest?useUnicode=true&characterEncoding=UTF-8
+#    username: dbtest
+#    password: dbtest
+#    type: com.alibaba.druid.pool.DruidDataSource
+#    driver-class-name: com.mysql.jdbc.Driver
+#    maxActive: 20
+#    initialSize: 1
+#    maxWait: 60000
+#    minIdle: 1
+#    timeBetweenEvictionRunsMillis: 60000
+#    minEvictableIdleTimeMillis: 300000
+#    validationQuery: select 'x'
+#    testWhileIdle: true
+#    testOnBorrow: false
+#    testOnReturn: false
+#    poolPreparedStatements: true
+#    maxOpenPreparedStatements: 20
   jpa:
     hibernate:
-      ddl-auto: true
+      ddl-auto: create-drop
     show-sql: true
